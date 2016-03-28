@@ -25,13 +25,13 @@ Varianta web a aplicatiei libraryDotNet + API-uri pentru comunicarea cu baza de 
 
 	<b>Rents Operations:</b> 
 
-	<b>	--rent a new book: 1. [GET] freebooksleft.php (bookid) </b> -> Return INT of free left books (Used to verify if there is any book left available for rent)
+	<b>	-rent a new book: 1. [GET] freebooksleft.php (bookid) </b> -> Return INT of free left books (Used to verify if there is any book left available for rent)
 
 			<b>	2. [POST] rentbooksetrent.php (bookid,nume,prenume,clasa) </b> -> create a new rent table entry, with default today date and 0 (=flase) returned
 
 			<b>	3.[POST] rentbookSetFreeBookMinusOne.php (bookid) </b>-> free=free-1
 
-<b>	--return a book:  1.[POST]  rentbookSetReturned.php (bookid,nume,clasa) </b>-> set for the matching cases backDate= date.today and returned=1(true)
+<b>	-return a book:  1.[POST]  rentbookSetReturned.php (bookid,nume,clasa) </b>-> set for the matching cases backDate= date.today and returned=1(true)
 
 
 <b>Show Operations</b>
@@ -46,12 +46,12 @@ Varianta web a aplicatiei libraryDotNet + API-uri pentru comunicarea cu baza de 
 
 <b>Others(daemons)</b>
 
-		<b>-daemonGetSmallestFreeBook.php </b> -> usefull to check if free is lower than 0
+		<b>-daemonGetSmallestFreeBook.php </b> -> usefull to check if free is lower than 0</b>
 
 
 
 
-<b>All database connection errors/ex's are stored in log.txt</<b>>
+<b>All database connection errors/ex's are stored in log.txt</<b>
 
 
 <p>403 - parametru null
