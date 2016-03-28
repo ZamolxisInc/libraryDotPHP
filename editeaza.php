@@ -25,7 +25,7 @@ if(!empty($bookID))
 	echo '
 <div class="container">
   <h2>Editeaza cartea '.$title.' - '.$author.'</h2>
-  <form role="form" action="/api/editbook.php" method="post">
+  <form role="form" action="./api/editbook.php" method="post">
     <div class="form-group">
       <label for="text">BookID:</label>
       <input type="text" class="form-control" id="bookid" value='.$bookID.' name="bookid">
