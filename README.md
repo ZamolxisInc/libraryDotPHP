@@ -60,3 +60,4 @@ All database connection errors/ex's are stored in log.txt
 407 - record have been not sent
 408 - nu mai sunt carti libere
 666 - cannot connect to db
+<b>Haha</b>
