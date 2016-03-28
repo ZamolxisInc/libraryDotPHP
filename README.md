@@ -1,5 +1,12 @@
 # libraryDotPHP
 
+
+Varianta web a aplicatiei libraryDotNet + API-uri pentru comunicarea cu baza de date (folosite de LibraryDotNet)
+
+
+Documentation:
+
+
 Database connection setting: /bd/bd.php
 
 Book Operations:
