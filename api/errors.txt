@@ -1,0 +1,6 @@
+403 - parametru null
+402 -  0 rezultate
+406 - record sent to db
+407 - record have been not sent
+408 - nu mai sunt carti libere
+666 - cannot connect to db
