@@ -40,7 +40,7 @@
 
 ?>
 
-
+<h2><center>Statistica</center></h2>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -55,7 +55,7 @@
         ]);
 
         var options = {
-          title: 'Starea cartilor returnate'
+          title: 'Situatia cartilor returnate'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -63,7 +63,77 @@
         chart.draw(data, options);
       }
     </script>
-
+<center>
     <div id="piechart" style="width: 900px; height: 500px;"></div>
+	</center>	
+	<center>
+	<table class="table table-condensed">
+    <thead>
+	<h2>Top carti imprumutate</h2>
+      <tr>
+        <th>Clasa</th>
+        <th>Numarul total de carti imprumutate</th>
+      </tr>
+    </thead>
+    <tbody>
 	
+<?php
+
+
+			$sql3 = "SELECT clasa,COUNT(*) AS nr FROM rents GROUP BY clasa ORDER BY COUNT(*) DESC LIMIT 5;";
+			$result3 = $conn->query($sql3);
+			if ($result3->num_rows >= 0) 
+			{
+				while($row = $result3->fetch_assoc()) {
+					
+				echo '<tr><td>'.strtoupper($row["clasa"]).'</td><td>'.$row["nr"].'</td></tr>';
+				
+				}
+			}
+			//$conn->close();
+
+?>
+	</tbody>
+  </table>
+  
+  
+ 
+			
+<table class="table table-condensed">
+    <thead>
+	<h2>Top elevi care imprumuta carti</h2>
+      <tr>
+        <th>Clasa</th>
+		<th>Nume</th>
+		<th>Prenume</th>
+        <th>Numarul total de carti imprumutate</th>
+      </tr>
+    </thead>
+    <tbody>
 	
+<?php
+
+
+			$sql3 = "SELECT clasa,nume,prenume,COUNT(*) AS nr FROM rents GROUP BY clasa,nume ORDER BY COUNT(*) DESC LIMIT 5;";
+			$result3 = $conn->query($sql3);
+			if ($result3->num_rows >= 0) 
+			{
+				while($row = $result3->fetch_assoc()) {
+					
+				echo '<tr><td>'.strtoupper($row["clasa"]).'</td><td>'.strtoupper($row["nume"]).'</td><td>'.strtoupper($row["prenume"]).'</td><td>'.strtoupper($row["nr"]).'</td></tr>';
+				
+				}
+			}
+			$conn->close();
+
+?>
+	</tbody>
+  </table>			
+  
+  
+  
+  
+  <footer>
+  
+  <p><center>Made with love by Zamolxis @2016</center></p>
+  </footer>
