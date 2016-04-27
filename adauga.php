@@ -2,7 +2,7 @@
 
 <div class="container">
   <h2>Adauga carte</h2>
-  <form role="form" action="/api/addbook.php" method="post">
+  <form role="form" action="./api/addbook.php" method="post">
     <div class="form-group">
       <label for="text">BookID:</label>
       <input type="text" class="form-control" id="bookid" placeholder="1234567" name="bookid">
